@@ -1,35 +1,80 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Askonim International</title>
+  <link rel="icon" type="image/png" href="favicon.ico" />
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #111;
-      color: #fff;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e8dc);
+      color: #1f2d1d;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      overflow: hidden;
+      position: relative;
       text-align: center;
     }
-    img {
-      width: 150px;
-      margin-bottom: 20px;
+
+    .background-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150vmin;
+      opacity: 0.06;
+      z-index: 0;
+      pointer-events: none;
     }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem 3rem;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      max-width: 650px;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      width: 360px;
+      margin-bottom: 30px;
+    }
+
     h1 {
-      font-size: 2.5em;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #204020;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #333;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Logo" />
-  <h1>Coming Soon</h1>
-  <p>               #35</p>
+  <img src="logo.png" alt="Logo Background" class="background-logo" />
+  <div class="content">
+    <img src="logo.png" alt="Askonim Logo" class="logo" />
+    <h1>Coming Soon...</h1>
+    <p>We’re preparing something powerful at Askonim International World Services.<br />A new platform is on the way — stay tuned!</p>
+  </div>
+  <div class="footer">&copy; 2025 Askonim International. All rights reserved.</div>
 </body>
 </html>
